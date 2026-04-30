@@ -14,7 +14,8 @@ from scipy.io import loadmat
 import warnings
 warnings.filterwarnings('ignore')
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, 'src'))
 from utils.data_parser import parse_nasa_battery, build_nasa_dataset
 from utils.visualization import plot_battery_health, plot_feature_importance
 
